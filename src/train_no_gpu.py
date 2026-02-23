@@ -46,7 +46,7 @@ def train_no_gpu(
     # Configure mlflow if environment variables are present
     tracking_uri = env.get("MLFLOW_TRACKING_URI")
     experiment_name = env.get("MLFLOW_EXPERIMENT_NAME", "default")
-    run_name = env.get("MLFLOW_RUN_NAME")
+    run_name = env.get("MLFLOW_RUN_NAME", "default")
 
     if tracking_uri:
         mlflow.set_tracking_uri(tracking_uri)
